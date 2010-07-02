@@ -1,0 +1,20 @@
+body{
+	color: #000;
+	background-color:gold;
+}
+
+pre {
+	font-family:"DejaVu Sans Mono","Courier New",monospace,Freemono !important;
+	font-size:12px;
+	line-height:12px;
+}
+
+#header {
+	font-size:12px;
+	line-height:12px;
+}
+
+a {
+	color:#222222;
+	text-decoration:bold;
+}
