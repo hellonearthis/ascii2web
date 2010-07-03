@@ -1,1 +1,6 @@
-Yeap
+Two programs to change ascii into unicode for use on the web.
+One changes CP-437 ascii to unicode &#xxxx; 
+and the other UTF-8 code (which isn't always needed as the web works with utf-8
+but it was a fun bit of code to write)
+
+Thanks to Adriel for the challange
