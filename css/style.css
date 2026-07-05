@@ -1,12 +1,61 @@
 body{
 	color: #000;
 	background-color:gold;
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0;
 }
 
-pre {
+.app-shell {
+	box-sizing: border-box;
+	margin: 0 auto;
+	max-width: 1100px;
+	padding: 24px;
+}
+
+.converter {
+	display: grid;
+	gap: 10px;
+	margin-bottom: 24px;
+}
+
+.converter label {
+	font-weight: bold;
+}
+
+.converter textarea,
+.converter select,
+#entity-output {
+	box-sizing: border-box;
+	font: inherit;
+	max-width: 100%;
+	padding: 8px;
+	width: 100%;
+}
+
+.actions {
+	display: flex;
+	gap: 10px;
+}
+
+button {
+	cursor: pointer;
+	font-weight: bold;
+	padding: 8px 12px;
+}
+
+pre,
+#entity-output {
 	font-family:"DejaVu Sans Mono","Courier New",monospace,Freemono !important;
 	font-size:12px;
 	line-height:12px;
+}
+
+pre {
+	background: #111;
+	color: #eee;
+	overflow: auto;
+	padding: 16px;
+	white-space: pre;
 }
 
 #header {
@@ -16,5 +65,5 @@ pre {
 
 a {
 	color:#222222;
-	text-decoration:bold;
+	font-weight:bold;
 }
