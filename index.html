@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ascii2web JavaScript converter</title>
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+  <script src="js/ascii2web.js" defer></script>
+</head>
+<body>
+  <main class="app-shell">
+    <header>
+      <h1>ascii2web JavaScript converter</h1>
+      <p>Convert CP-437 or UTF-8 text art into safe HTML numeric entities and preview it without executing input as markup.</p>
+    </header>
+
+    <form id="converter-form" class="converter" action="#">
+      <label for="encoding">Source encoding</label>
+      <select id="encoding" name="encoding">
+        <option value="cp437">CP-437 / DOS NFO</option>
+        <option value="utf8">UTF-8</option>
+      </select>
+
+      <label for="file-input">Upload a text/NFO file</label>
+      <input id="file-input" name="file-input" type="file" accept=".nfo,.ans,.asc,.txt,text/plain">
+
+      <label for="source-text">Or paste text</label>
+      <textarea id="source-text" name="source-text" rows="12" spellcheck="false" placeholder="Paste ASCII, NFO, or UTF-8 text here"></textarea>
+
+      <div class="actions">
+        <button type="submit">Convert safely</button>
+        <button id="clear-button" type="button">Clear</button>
+      </div>
+    </form>
+
+    <section aria-labelledby="preview-heading">
+      <h2 id="preview-heading">Safe preview</h2>
+      <pre id="preview" aria-live="polite"></pre>
+    </section>
+
+    <section aria-labelledby="entities-heading">
+      <h2 id="entities-heading">HTML entity output</h2>
+      <textarea id="entity-output" rows="12" readonly spellcheck="false"></textarea>
+    </section>
+  </main>
+</body>
+</html>

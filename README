@@ -1,6 +1,34 @@
-Two programs to change ascii into unicode for use on the web.
-One changes CP-437 ascii to unicode &#xxxx; 
-and the other UTF-8 code (which isn't always needed as the web works with utf-8
-but it was a fun bit of code to write)
+ascii2web
+=========
 
-Thanks to Adriel for the challange
+Two programs to change ascii into unicode for use on the web.
+One changes CP-437 ascii to unicode `&#xxxx;` entities, and the other UTF-8 code
+(which isn't always needed as the web works with UTF-8, but it was a fun bit of
+code to write).
+
+The project also includes a browser-only JavaScript converter in `index.html`.
+It can convert uploaded or pasted CP-437/UTF-8 text into HTML numeric entities
+and renders the preview safely with `textContent` so pasted markup is displayed
+as text instead of being executed as HTML.
+
+Run locally
+-----------
+
+From this directory, start a local static server:
+
+```sh
+python3 -m http.server 8000
+```
+
+Then open <http://localhost:8000/> for the JavaScript converter.
+
+Safety notes
+------------
+
+The JavaScript converter keeps two separate outputs:
+
+* **HTML entity output**: the generated `&#xxxx;` string you can copy.
+* **Safe preview**: decoded text assigned through `textContent`, not raw
+  `innerHTML`, so input such as `<script>` is shown as text.
+
+Thanks to Adriel for the challenge.
